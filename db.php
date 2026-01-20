@@ -1,7 +1,6 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "employee_feedback");
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-if ($conn->connect_error) {
-    die("Connection failed");
-}
+$conn = new mysqli("localhost", "root", "", "employee_feedback");
+$conn->set_charset("utf8mb4");
 ?>
